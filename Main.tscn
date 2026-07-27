@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://do8w2ubhgmq1a"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_world"]
+[ext_resource type="Script" path="res://greg.gd" id="2_greg"]
+[ext_resource type="Script" path="res://camera_rig.gd" id="3_cam"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_world")
+
+[node name="Greg" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 0)
+script = ExtResource("2_greg")
+
+[node name="CameraRig" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 40)
+script = ExtResource("3_cam")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+current = true
+far = 2000.0

@@ -1,2 +1,2 @@
 # Fall-Out
-A hilarious ragdoll physics puzzle game.
+A game about a small little human alone in a big and colorless dystopia.

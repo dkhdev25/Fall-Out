@@ -1,4 +1,4 @@
-extends RigidBody3D
+xtends RigidBody3D
 # Wobbly / ragdoll "Greg" whose OWN arms stretch out as grappling hooks.
 # Greg-character.obj is one fused static mesh in a T-pose:
 #   left hand  ~ (-3.93, 7.12, 0)   right hand ~ (4.04, 7.13, 0)   (arm band y ~ 6.3..8.4)

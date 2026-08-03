@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://do8w2ubhgmq1a"]
 
-[ext_resource type="MeshLibrary" uid="uid://bpqjegu5gwwuj" path="res://tilesmap.tres" id="2_uu6xs"]
+[ext_resource type="MeshLibrary" uid="uid://c25xk3iiifu4k" path="res://assets/tileasset.tres" id="1_glv2v"]
 
 [node name="Main" type="Node3D" unique_id=2017575062]
 
-[node name="GridMap" type="GridMap" parent="." unique_id=1376431096]
-mesh_library = ExtResource("2_uu6xs")
+[node name="Environment" type="Node3D" parent="." unique_id=1210770521]
+
+[node name="GridMap" type="GridMap" parent="Environment" unique_id=1376431096]
+mesh_library = ExtResource("1_glv2v")
 cell_size = Vector3(1, 1, 1)
 data = {
-"cells": PackedInt32Array(65535, 65535, 1376262, 1, 65535, 1376262, 0, 1, 1376262, 65527, 0, 1376262, 65534, 2, 1376262)
+"cells": PackedInt32Array(65535, 65535, 1376262, 1, 65535, 1376262, 0, 1, 1376262, 65527, 0, 1376262, 65534, 2, 1376262, 65532, 65534, 5)
 }
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=2054871711]
+[node name="Camera3D" type="Camera3D" parent="Environment" unique_id=2054871711]
 transform = Transform3D(0.8762227, 0.13488369, -0.46264467, 0, 0.9600303, 0.27989608, 0.4819063, -0.24525131, 0.8412004, -1.4373208, 1.4402065, 2.9673984)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=868781634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8324451, 0)
